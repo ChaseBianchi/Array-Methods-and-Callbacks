@@ -43,7 +43,7 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 function getFinals(array) {
-   return array.filter(func => func['Stage']==='Final');
+   return array.filter(a => a['Stage']==='Final');
 }
 
 
@@ -54,14 +54,20 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(array,cb) {
-    const years =[];
-    for(let i=0;i<cb(array).length;i++){
-        years.push(cb(array)[i]['Year']);
-    }
-    return years;
-}
+//  First try here, going to try to simplify it with a method.
+// function getYears(array,cb) {
+//     const years =[];
+//     for(let i=0;i<cb(array).length;i++){
+//         years.push(cb(array)[i]['Year']);
+//     }
+//     return years;
+// }
 
+function getYears(array,cb) {
+    const years=[];
+    cb(array).forEach(a => years.push(a['Year']));
+    return years;
+    }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -114,8 +120,8 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
-   /* code here */
+function getAverageGoals(cb) {
+   
 }
 
 
