@@ -48,7 +48,7 @@ Your goal today will be to manipulate the data using array methods and callbacks
 ## Instructions
 
 ### Task 1: Set up Project
-
+ 
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
